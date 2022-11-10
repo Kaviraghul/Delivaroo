@@ -3,6 +3,7 @@ import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import {  AdjustmentsIcon, ChevronDownIcon, SearchIcon, SparklesIcon, UserIcon } from "react-native-heroicons/solid";
 import Categories from '../components/Categories';
+import FeaturedRow from '../components/FeaturedRow';
 
 export default function HomeScreen() {
   
@@ -37,8 +38,28 @@ export default function HomeScreen() {
                     <AdjustmentsIcon color= "#00CCBB" />
                 </View>
 
-                <ScrollView>
+                <ScrollView className="bg-gray-100" contentContainerStyle={{
+                    paddingBottom: 100,
+                }} >
                     <Categories />
+                    <FeaturedRow 
+                        id = {1}
+                        title = "Some title"
+                        description = "description about the title"
+                        categoryName = "Category 1"
+                    />
+                    <FeaturedRow 
+                        id = {2}
+                        title = "Some title"
+                        description = "description about the title"
+                        categoryName = "Category 1"
+                    />
+                    <FeaturedRow 
+                        id = {3}
+                        title = "Some title"
+                        description = "description about the title"
+                        categoryName = "Category 1"
+                    />
                 </ScrollView>
     </SafeAreaView>
   )
