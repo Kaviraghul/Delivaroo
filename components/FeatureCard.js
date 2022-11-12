@@ -1,13 +1,14 @@
 import { View, Text, Image, TouchableOpacity} from 'react-native'
 import React from 'react'
 import { LocationMarkerIcon, StarIcon } from 'react-native-heroicons/solid'
+import { urlFor } from '../sanity'
 
 const FeatureCard = ({
     id, imgUrl, title, rating, gener, address, shortDescription, dishes, long, lat,
 }) => {
   return (
     <TouchableOpacity className = "bg-white mr-3 shadow" >
-      <Image className='w-64 h-36 rounded-sm' source={{ uri : imgUrl}} />
+      <Image className='w-64 h-36 rounded-sm' source={{ uri : urlFor(imgUrl).url()}} />
       <View className='px-3 pb-4'>
       <Text className = "font-bold text-lg pt-2" >{title}</Text>
       <View className = "flex-row items-center space-x-1" >
