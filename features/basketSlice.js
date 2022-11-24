@@ -20,7 +20,7 @@ export const basketSlice = createSlice({
       if (index >= 0) {
         itemsSnapshot.splice(index, 1);
       } else {
-        console, console.log("some=thing went wrong");
+        console, console.log("something went wrong");
       }
 
       state.items = itemsSnapshot;
