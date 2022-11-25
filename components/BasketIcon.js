@@ -16,6 +16,9 @@ const BasketIcon = () => {
     amount: totalPrice,
     code: "INR",
   });
+  
+  if(items.length == 0) return null;
+
   return (
     <View className="absolute bottom-10 w-full z-50">
       <TouchableOpacity onPress={() => navigation.navigate("Basket")} className="flex-row bg-[#00CCBB] rounded-lg p-4 mx-4 space-x-1">
